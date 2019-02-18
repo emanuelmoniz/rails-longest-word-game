@@ -1,0 +1,20 @@
+<h3 id="title">Letters</h3>
+<div id="letters">
+<% @letters.each do |letter| %>
+  <div class="letter"><%= letter %></div>
+<% end %>
+</div>
+
+<form id="try-form" action="/score" method="post">
+  <div class="form-group">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= hidden_field_tag 'letters', "#{@letters}"%>
+    <%= hidden_field_tag 'start_time', "#{@start_time}"%>
+    <input class="form-control" type="text" name="try" placeholder="Word">
+  </div>
+  <button class="btn btn-primary" type="submit">Try!</button>
+</form>
+
+
+<p><%= link_to "Get another grid of letters", "" %></p>
+<p><%= link_to "Start over with another grid size.", controller: "games", action: "index" %></p>

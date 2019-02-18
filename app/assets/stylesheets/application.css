@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+#header{
+  padding-top: 50px;
+}
+
+#letters {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.letter{
+  background-color: #3498db;
+  padding: 10px 20px;
+  color: white;
+}
+
+#title{
+  padding-top: 20px;
+}
+
+#try-form{
+  margin-bottom: 15px;
+}
+
+.btn {
+  width: 100%;
+}

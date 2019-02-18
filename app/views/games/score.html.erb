@@ -1,0 +1,7 @@
+<h3 id="title">Result</h3>
+<h4 id="congratulations"><%= 'Congratulations!' if @params[:state] %></h4>
+<p>The word <strong><%= @params[:try] %></strong> <%= @params[:message] %></p>
+<p>Your Score: <%= @params[:score].to_i %> </p>
+
+<p><%= link_to 'Try again with the same grid.', :back %></p>
+<p><%= link_to "Start over with another grid size.", controller: "games", action: "index" %></p>
